@@ -12,7 +12,6 @@ class FIFOCache(BaseCaching):
         """Initialize the FIFOCache"""
         super().__init__()
 
-
     def put(self, key, item):
         """Add an item in the cache, and removes the first
         pair in the dict and prints the the removed key"""
