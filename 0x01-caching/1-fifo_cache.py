@@ -14,9 +14,9 @@ class FIFOCache(BaseCaching):
         value = self.cache_data.values()
         value_length = len(value)
 
-        if value_length > BaseCaching.MAX_ITEMS:
-            first_key, first_value = next(iter(self.cache_data.items()))
-            deleted_key = self.cache_data.pop(first_key, first_value)
+        if value_length >= BaseCaching.MAX_ITEMS:
+            first_key = next(iter(self.cache_data))
+            self.cache_data.pop(first_key)
             print("Discard: {}".format(first_key))
 
         if key is None or item is None:
