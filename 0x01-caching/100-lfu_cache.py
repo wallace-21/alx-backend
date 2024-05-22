@@ -15,7 +15,7 @@ class LFUCache(BaseCaching):
         self.order = []
 
     def put(self, key, item):
-        """Add an item in the cache, and removes the least frequently 
+        """Add an item in the cache, and removes the least frequently
         used pair in the dict and prints the the removed key"""
         if key is None or item is None:
             return
