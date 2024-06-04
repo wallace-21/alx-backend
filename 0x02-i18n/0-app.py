@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    """fucntion that renders a template for a flask app"""
+    """fucntion that renders a template for a flask app """
     return render_template("0-index.html")
 
 
