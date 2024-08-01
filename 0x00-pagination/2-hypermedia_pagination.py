@@ -51,11 +51,7 @@ class Server:
             'total_pages': total_pages
         }
 
-def index_range(page: int, page_size: int) -> Tuple:
-    """ unction, you need to calculate the start and
-    end indexes for the given page and page_size"""
 
-    start_index: int = (page - 1) * page_size
-    end_index: int = start_index + page_size
-    indexes: Tiple(int) = (start_index, end_index)
-    return (indexes)
+def index_range(page: int, page_size: int) -> tuple:
+    """ Returns a tuple containing a range of indexes """
+    return ((page - 1) * page_size, page * page_size)
